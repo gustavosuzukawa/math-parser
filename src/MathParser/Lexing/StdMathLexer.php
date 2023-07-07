@@ -119,6 +119,7 @@ class StdMathLexer extends Lexer
         $this->add(new TokenDefinition('/\-/', TokenType::SubtractionOperator));
         $this->add(new TokenDefinition('/\*/', TokenType::MultiplicationOperator));
         $this->add(new TokenDefinition('/\//', TokenType::DivisionOperator));
+        $this->add(new TokenDefinition('/\%/', TokenType::RestoOperator));
         $this->add(new TokenDefinition('/\^/', TokenType::ExponentiationOperator));
 
         // Postfix operators
