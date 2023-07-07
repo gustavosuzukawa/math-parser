@@ -67,6 +67,7 @@ abstract class Node implements Visitable
             case TokenType::SubtractionOperator:
             case TokenType::MultiplicationOperator:
             case TokenType::DivisionOperator:
+            case TokenType::RestoOperator:
             case TokenType::ExponentiationOperator:
                 return new ExpressionNode(null, $token->getValue(), null);
 
@@ -115,6 +116,7 @@ abstract class Node implements Visitable
             case TokenType::SubtractionOperator:
             case TokenType::MultiplicationOperator:
             case TokenType::DivisionOperator:
+            case TokenType::RestoOperator:
             case TokenType::ExponentiationOperator:
                 return new ExpressionNode(null, $token->getValue(), null);
 
