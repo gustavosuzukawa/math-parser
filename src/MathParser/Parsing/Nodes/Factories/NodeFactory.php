@@ -69,6 +69,12 @@ class NodeFactory {
      * @var ExponentiationNodeFactory $exponentiationFactory;
      **/
     protected $exponentiationFactory;
+    /**
+     * Factory for creating resto nodes
+     *
+     * @var RestoNodeFactory $restoFactory;
+     **/
+    protected $restoFactory;
 
     /**
      * Constructor
@@ -80,6 +86,7 @@ class NodeFactory {
         $this->multiplicationFactory = new MultiplicationNodeFactory();
         $this->divisionFactory = new DivisionNodeFactory();
         $this->exponentiationFactory = new ExponentiationNodeFactory();
+        $this->restoFactory = new RestoNodeFactory();
     }
 
     /**
