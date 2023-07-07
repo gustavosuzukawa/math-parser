@@ -193,6 +193,7 @@ abstract class Node implements Visitable
                     return 1 + $left->complexity() + (($right === null) ? 0 : $right->complexity());
 
                 case '/':
+                case '%':
                     return 3 + $left->complexity() + (($right === null) ? 0 : $right->complexity());
 
                 case '^':
