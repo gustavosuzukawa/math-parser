@@ -116,6 +116,8 @@ class ComplexEvaluator implements Visitor
                 return Complex::mul($a, $b);
             case '/':
                 return Complex::div($a, $b);
+            case '%':
+                return Complex::mod($a, $b);
             case '^':
                 // This needs to be improved.
                 return Complex::pow($a, $b);
