@@ -148,6 +148,19 @@ class NodeFactory {
     }
 
     /**
+     * Create a resto node representing '$leftOperand % $rightOperand'.
+     *
+     * @param mixed $leftOperand
+     * @param mixed $rightOperand
+     * @retval ExpressionNode
+     *
+     */
+    public function resto($leftOperand, $rightOperand)
+    {
+        return $this->restoFactory->makeNode($leftOperand, $rightOperand);
+    }
+
+    /**
      * Create a unary minus node representing '-$operand'.
      *
      * @param mixed $operand
@@ -173,6 +186,7 @@ class NodeFactory {
             case '*': return $this->multiplication($node->getLeft(), $node->getRight());
             case '/': return $this->division($node->getLeft(), $node->getRight());
             case '^': return $this->exponentiation($node->getLeft(), $node->getRight());
+            case '%': return $this->resto($node->getLeft(), $node->getRight());
         }
     }
 
