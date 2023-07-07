@@ -113,6 +113,8 @@ class Evaluator implements Visitor
                 }
 
                 return $leftValue / $rightValue;
+            case '%':
+                return $rightValue % $leftValue;
             case '^':
                 // Check for base equal to M_E, to take care of PHP's strange
                 // implementation of pow, where pow(M_E, x) is not necessarily
