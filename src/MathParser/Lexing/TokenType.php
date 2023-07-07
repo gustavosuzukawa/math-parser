@@ -26,6 +26,7 @@ namespace MathParser\Lexing;
  * * SubtractionOperator
  * * MultiplicationOperator
  * * DivisionOperator
+ * * RestoOperator
  * * ExponentiationOperator
  * * FunctionName
  * * Constant
@@ -66,6 +67,9 @@ final class TokenType
     const FactorialOperator = 105;
     /** Token representing postfix subfactorial operator '!!' */
     const SemiFactorialOperator = 105;
+
+    /** Token representing '%' */
+    const RestoOperator = 110;
 
     /** Token represented a function name, e.g. 'sin' */
     const FunctionName = 200;
